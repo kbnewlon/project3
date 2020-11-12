@@ -19,6 +19,18 @@ module.exports = function (sequelize, type) {
       type: type.STRING,
       allowNull: false,
     },
+    city: {
+      type: type.STRING,
+      allowNull: false,
+    },
+    state: {
+      type: type.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: type.STRING,
+      allowNull: false,
+    },
     resetPasswordToken: type.STRING,
     resetPasswordExpires: type.DATE,
   });
