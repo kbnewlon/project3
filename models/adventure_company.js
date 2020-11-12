@@ -53,7 +53,7 @@ module.exports = function(sequelize, type){
         taxId: {
             type: type.STRING,
             allowNull: true,
-        },
+        }
     });
    
   

@@ -37,7 +37,12 @@ module.exports = function (sequelize, type) {
             foreignKey: {
                 allowNull: false
             }
-        })
+        });
+        Adventure.hasMany(models.Adventure_rating, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
     }
     return Adventure;
 };
