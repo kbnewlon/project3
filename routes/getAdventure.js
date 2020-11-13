@@ -5,7 +5,7 @@ app.get('/adventures', function (req, res) {
     db.Adventure.findAll({
         include: [db.Tag, db.Rating, db.Adventure_company]
     }).then(function (data) {
-        res.json(data);
+        res.status(200).json(data);
     }).catch(err => {
         res.status(500).json(err)
     });
@@ -18,7 +18,7 @@ app.get("/adventure/:id", function (req, res) {
         where: { id: req.params.id }, 
         include: [db.Tag, db.Rating, db.Adventure_company]
      }).then(function (data) {
-        res.json(data);
+        res.status(200).json(data);
     }).catch(err => {
         res.status(500).json(err)
     });
