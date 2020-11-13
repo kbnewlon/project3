@@ -3,8 +3,7 @@ const db = require('../models');
 //update adventure company route 
 app.put('/adventure/company/:id', function (req, req) {
     db.Adventure_company.update({
-        Adventure_companyId: req.body.Adventure_companyId,
-        adventure_name: req.body.adventure_name,
+        name: req.body.name,
         address_1: req.body.address_1,
         address_2: req.body.address_2,
         city: req.body.city,

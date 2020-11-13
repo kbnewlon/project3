@@ -5,7 +5,7 @@ module.exports = function(sequelize, type){
             primaryKey: true,
             autoIncrement: true,
         },
-        adventure_name: {
+        name: {
             type: type.STRING,
             allowNull: false,
         },
