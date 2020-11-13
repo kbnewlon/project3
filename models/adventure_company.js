@@ -57,7 +57,7 @@ module.exports = function(sequelize, type){
     });
 
     Adventure_company.associate = function (models) {
-        Adventure_company.belongsToOne(models.Company_user, {
+        Adventure_company.hasOne(models.Company_user, {
             foreignKey: {
                 allowNull: false
             }
