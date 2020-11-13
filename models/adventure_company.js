@@ -55,7 +55,15 @@ module.exports = function(sequelize, type){
             allowNull: true,
         }
     });
-   
+
+    Adventure_company.associate = function (models) {
+        Adventure_company.belongsToOne(models.Company_user, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+       
+    }
   
     return Adventure_company;
 };
