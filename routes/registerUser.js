@@ -1,5 +1,13 @@
 const passport = require('passport');
 const db = require("../models");
+const stream = require('getstream');
+
+const client = stream.connect(
+  process.env.STREAM_API_KEY,
+  process.env.STREAM_KEY_SECRET,
+  process.env.STREAM_APP_ID,
+  { location: 'us-east' },
+);
 
 module.exports = app => {
   app.post('/registerUser', (req, res, next) => {
@@ -27,6 +35,9 @@ module.exports = app => {
             },
           }).then(user => {
             console.log(user);
+            client.user(data.username).create({
+              name: `${data.first_name} ${data.last_name}`
+            });
             user
               .update({
                 first_name: data.first_name,
