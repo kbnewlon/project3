@@ -33,7 +33,7 @@ module.exports = app => {
             const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
               expiresIn: 60 * 60,
             });
-            const appToken = client.createUserToken(`${user.id}`);
+            const appToken = client.createUserToken(`${user.username}`);
             const id = user.id
             res.status(200).send({
               auth: true,
