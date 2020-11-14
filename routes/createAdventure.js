@@ -16,3 +16,5 @@ app.post('/adventure', function (req, res) {
         res.status(500).json(err)
     })
 });
+
+module.exports = app;
