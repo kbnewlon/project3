@@ -4,7 +4,7 @@ const db = require("./models");
 app.post('/adventure/company', function (req, res) {
     db.Adventure_company.create({
         Adventure_companyId: req.body.Adventure_companyId,
-        adventure_name: req.body.adventure_name,
+        name: req.body.name,
         address_1: req.body.address_1,
         address_2: req.body.address_2,
         city: req.body.city,

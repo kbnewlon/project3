@@ -13,3 +13,5 @@ app.post('/tag', function (req, res) {
         res.status(500).json(err)
     })
 });
+
+module.exports = app;
