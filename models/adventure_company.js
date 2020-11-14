@@ -5,7 +5,7 @@ module.exports = function(sequelize, type){
             primaryKey: true,
             autoIncrement: true,
         },
-        adventure_name: {
+        name: {
             type: type.STRING,
             allowNull: false,
         },
@@ -55,7 +55,15 @@ module.exports = function(sequelize, type){
             allowNull: true,
         }
     });
-   
+
+    Adventure_company.associate = function (models) {
+        Adventure_company.hasOne(models.Company_user, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+       
+    }
   
     return Adventure_company;
 };

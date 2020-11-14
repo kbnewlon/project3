@@ -21,11 +21,9 @@ module.exports = function (sequelize, type) {
         }
     })
     Tag.associate = function (models) {
-        Tag.belongsTo(models.Adventure, {
-            foreignKey: {
-                allowNull: false
-            }
+        Tag.belongsToMany(models.Adventure, {
+            through: "tags_adventures"
         });
-    }
+    };
     return Tag;
 };

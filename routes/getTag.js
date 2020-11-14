@@ -1,9 +1,8 @@
 const db = require("../models");
 
 //get all adventures
-app.get('/adventures', function (req, res) {
-    db.Adventure.findAll({
-        include: [db.Tag, db.Rating, db.Adventure_company]
+app.get('/tags', function (req, res) {
+    db.Tag.findAll({
     }).then(function (data) {
         res.status(200).json(data);
     }).catch(err => {
@@ -13,11 +12,10 @@ app.get('/adventures', function (req, res) {
 
 
 //get one adventure 
-app.get("/adventure/:id", function (req, res) {
-    db.Adventure.findOne({ 
-        where: { id: req.params.id }, 
-        include: [db.Tag, db.Rating, db.Adventure_company]
-     }).then(function (data) {
+app.get("/tag/:id", function (req, res) {
+    db.Tag.findOne({ 
+        where: { id: req.params.id }
+    }).then(function (data) {
         res.status(200).json(data);
     }).catch(err => {
         res.status(500).json(err)
