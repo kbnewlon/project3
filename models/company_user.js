@@ -21,7 +21,7 @@ module.exports = function(sequelize, type){
         },
       companyId: {
             type: type.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
    
     })
