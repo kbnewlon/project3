@@ -1,4 +1,4 @@
-const db = require("./models");
+const db = require("../models");
 
 //create new adventure
 app.post('/adventure', function (req, res) {
