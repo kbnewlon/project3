@@ -1,11 +1,11 @@
 const db = require("../models");
 
 //create new adventure
-app.post('/tag', function (req, res) {
-    db.Tag.create({
-        name: req.body.name,
-        description: req.body.description,
-        image: req.body.image
+app.post('/company_user', function (req, res) {
+    db.Company_user.create({
+        user_name: req.body.user_name,
+        password: req.body.password,
+        email: req.body.email
     }).then(function (data) {
         console.log(data);
         res.status(200).json(data);

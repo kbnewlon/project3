@@ -7,48 +7,48 @@ module.exports = function(sequelize, type){
         },
         name: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         address_1: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         address_2: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         city: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         state: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         zip_code: {
             type: type.INTEGER,
-            allowNull: false,
+            allowNull: true,
         },
         phone: {
             type: type.BIGINT,
-            allowNull: false,
+            allowNull: true,
         },
         email: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         website: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         
         description: {
             type: type.TEXT,
-            allowNull: false,
+            allowNull: true,
         },
        image: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         taxId: {
             type: type.STRING,
