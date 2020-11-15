@@ -18,6 +18,16 @@ module.exports = function (sequelize, type) {
         image: {
             type: type.STRING,
             allowNull: false,
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     })
     Tag.associate = function (models) {

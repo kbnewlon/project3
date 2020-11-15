@@ -15,7 +15,7 @@ module.exports = function(sequelize, type){
         },
         address_2: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         city: {
             type: type.STRING,
@@ -50,9 +50,15 @@ module.exports = function(sequelize, type){
             type: type.STRING,
             allowNull: false,
         },
-        taxId: {
-            type: type.STRING,
-            allowNull: true,
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     });
 
