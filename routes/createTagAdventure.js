@@ -1,4 +1,4 @@
-const db = require ("./models");
+const db = require ("../models");
 
 //create adventure tag route
 app.put('./adventure/:id/:tag_id', function(req,res){
