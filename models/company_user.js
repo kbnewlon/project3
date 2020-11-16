@@ -1,12 +1,12 @@
-module.exports = function(sequelize, type){
+module.exports = function (sequelize, type) {
     const Company_user = sequelize.define('Company_user', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        
-       user_name: {
+
+        user_name: {
             type: type.STRING,
             allowNull: false,
         },
@@ -14,14 +14,10 @@ module.exports = function(sequelize, type){
             type: type.STRING,
             allowNull: false,
         },
-        
-       email: {
+
+        email: {
             type: type.TEXT,
             allowNull: false,
-        },
-      companyId: {
-            type: type.INTEGER,
-            allowNull: true,
         },
         createdAt: {
             type: 'TIMESTAMP',
@@ -33,8 +29,15 @@ module.exports = function(sequelize, type){
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         }
-   
+
     })
-    
+    Company_user.associate = function (models) {
+        Company_user.hasOne(models.Adventure_company, {
+            foreignKey: {
+                allowNull: true
+            }
+        });
+    }
     return Company_user;
+
 };

@@ -1,4 +1,4 @@
-module.exports = function(sequelize, type){
+module.exports = function (sequelize, type) {
     const Adventure_company = sequelize.define('Adventure_company', {
         id: {
             type: type.INTEGER,
@@ -41,12 +41,12 @@ module.exports = function(sequelize, type){
             type: type.STRING,
             allowNull: true,
         },
-        
+
         description: {
             type: type.TEXT,
             allowNull: true,
         },
-       image: {
+        image: {
             type: type.STRING,
             allowNull: true,
         },
@@ -63,13 +63,13 @@ module.exports = function(sequelize, type){
     });
 
     Adventure_company.associate = function (models) {
-        Adventure_company.hasOne(models.Company_user, {
+        Adventure_company.belongsTo(models.Company_user, {
             foreignKey: {
-                allowNull: false
+                allowNull: true
             }
         });
-       
+        Adventure_company.hasMany(models.Adventure);
     }
-  
+
     return Adventure_company;
 };

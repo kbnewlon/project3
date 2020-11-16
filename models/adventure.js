@@ -48,6 +48,11 @@ module.exports = function (sequelize, type) {
                 allowNull: false
             }
         });
+
+        Adventure.belongsToMany(models.Tag, {
+            through: "tags_adventures"
+        });
+
     }
     return Adventure;
 };
