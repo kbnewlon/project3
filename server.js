@@ -6,7 +6,6 @@
 // =============================================================
 const express = require("express")
 const Cors = require("cors");
-const session = require("express-session");
 const passport = require("passport");
 const helmet = require("helmet");
 const db = require("./models");
@@ -28,25 +27,27 @@ app.use(Cors());
 app.use(helmet());
 app.use(passport.initialize());
 
-app.use(
-    session({
-        secret: process.env.SESSION_SECRET,
-        resave: false,
-        saveUninitialized: true,
-        cookie: {
-            maxAge: 2 * 60 * 60 * 1000,
-        },
-    })
-);
+
 
 require("./routes/createCompanyUser")(app);
 require("./routes/createAdventureCompany")(app);
+require("./routes/createAdventureRating")(app);
 require("./routes/createAdventure")(app);
 require("./routes/createTag")(app);
 require("./routes/createTagAdventure")(app);
+require("./routes/deleteAdventure")(app);
+require("./routes/deleteAdventureCompany")(app);
+require("./routes/deleteAdventureRating")(app);
+require("./routes/deleteCompanyUser")(app);
+require("./routes/deleteTag")(app);
+require("./routes/deleteTagAdventure")(app);
 require("./routes/getAdventure")(app);
 require("./routes/getAdventureCompany")(app);
 require("./routes/getCompanyUser")(app);
+require("./routes/updateAdventure")(app);
+require("./routes/updateAdventureCompany")(app);
+require("./routes/updateCompanyUser")(app);
+require("./routes/updateTag")(app);
 require("./routes/loginUser")(app);
 require("./routes/registerUser")(app);
 require("./routes/forgotPassword")(app);
