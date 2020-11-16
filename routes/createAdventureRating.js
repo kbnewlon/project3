@@ -1,7 +1,8 @@
 const db = ('../models');
 
 //create adventure rating route
-app.put('./Adventure_rating/:id', function (req,res){
+module.exports = (app) => {
+    app.put('./Adventure_rating/:id', function (req,res){
     db.Adventure_rating.findOne({
         where: {
             id: req.params.id
@@ -18,4 +19,4 @@ app.put('./Adventure_rating/:id', function (req,res){
     })
 });
 
-module.exports = app;
+};

@@ -1,6 +1,7 @@
 const db = require('../models');
 
 //delete adventure route
+module.exports = (app) => {
 app.delete('/adventure/:id', function (req,res){
     db.Adventure.destroy({
         where:{
@@ -16,4 +17,4 @@ app.delete('/adventure/:id', function (req,res){
     });
 });
 
-module.exports = app;
+};
