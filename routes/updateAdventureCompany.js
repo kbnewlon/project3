@@ -15,7 +15,6 @@ module.exports = (app) => {
             website: req.body.website,
             description: req.body.description,
             image: req.body.image,
-            taxId: req.body.taxId,
             Company_userId: req.body.Company_userId,
         }, {
             where: {
