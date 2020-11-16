@@ -31,6 +31,13 @@ module.exports = function (sequelize, type) {
         }
 
     })
-
+    Company_user.associate = function (models) {
+        Company_user.hasOne(models.Adventure_company, {
+            foreignKey: {
+                allowNull: true
+            }
+        });
+    }
     return Company_user;
+
 };
