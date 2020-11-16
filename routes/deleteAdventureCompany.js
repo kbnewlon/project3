@@ -2,7 +2,7 @@ const db = require('../models');
 
 //delete adventure company route
 module.exports = (app) => {
-    app.delete('/adventure/company/:id', function (req, res) {
+    app.delete('/company/:id', function (req, res) {
         db.Adventure_company.destroy({
             where: {
                 id: req.params.id
