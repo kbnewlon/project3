@@ -40,7 +40,7 @@ module.exports = function (sequelize, type) {
     Adventure.associate = function (models) {
         Adventure.belongsTo(models.Adventure_company, {
             foreignKey: {
-                allowNull: false
+                allowNull: true
             }
         });
         Adventure.hasMany(models.Adventure_rating, {
