@@ -1,22 +1,34 @@
-const db = ('../models');
+const db = require('../models');
 
 //create adventure rating route
 module.exports = (app) => {
-    app.put('./Adventure_rating/:id', function (req,res){
-    db.Adventure_rating.findOne({
-        where: {
-            id: req.params.id
-        }
-    }).then(function (data) {
-        if (!data) {
-            res.status(404).json(data)
-        } else {
-            data.addRating(req.params.Adventure_rating_id)
-            res.status(200).json(data)
-        }
-    }).catch(err => {
-        res.status(500).json(err)
+    app.post('/adventure_rating/:id/:userId', function (req, res) {
+        db.Adventure_rating.findAll({
+            where: {
+                AdventureId: req.params.id,
+                UserId: req.params.userId
+            }
+        }).then(ratings => {
+            if (ratings.length === 0) {
+                db.Adventure_rating.create({
+                    AdventureId: req.params.id,
+                    UserId: req.params.userId
+                }).then(updateRating => {
+                    if (!updateRating) {
+                        res.status(404).json(updateRating)
+                    } else {
+                        res.json(updateRating)
+                    }
+                }).catch(err => {
+                    console.log(err)
+                    res.status(500).json(err);
+                })
+            } else {
+                res.json(ratings);
+            }
+        })
     })
-});
 
 };
+
+
