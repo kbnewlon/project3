@@ -24,6 +24,16 @@ module.exports = function (sequelize, type) {
         latitude: {
             type: type.FLOAT,
             allowNull: true,
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     });
 
@@ -41,3 +51,4 @@ module.exports = function (sequelize, type) {
     }
     return Adventure;
 };
+

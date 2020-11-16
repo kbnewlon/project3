@@ -50,9 +50,15 @@ module.exports = function(sequelize, type){
             type: type.STRING,
             allowNull: true,
         },
-        taxId: {
-            type: type.STRING,
-            allowNull: true,
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
     });
 

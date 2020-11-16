@@ -4,6 +4,16 @@ module.exports = function (sequelize, type) {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
+        },
+        createdAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
+        },
+        updatedAt: {
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: false
         }
 
 
