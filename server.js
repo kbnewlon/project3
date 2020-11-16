@@ -42,6 +42,7 @@ app.use(
 require("./routes/createCompanyUser")(app);
 require("./routes/createAdventureCompany")(app);
 require("./routes/createAdventure")(app);
+require("./routes/createTag")(app);
 require("./routes/loginUser")(app);
 require("./routes/registerUser")(app);
 require("./routes/forgotPassword")(app);
