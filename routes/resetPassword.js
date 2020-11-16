@@ -3,10 +3,10 @@ const db = require("../models");
 const Op = Sequelize.Op;
 
 module.exports = (app) => {
-  app.get('/reset', (req, res) => {
+  app.get('/reset/:id', (req, res) => {
     db.User.findOne({
       where: {
-        resetPasswordToken: req.query.resetPasswordToken,
+        resetPasswordToken: req.params.id,
         resetPasswordExpires: {
           [Op.gt]: Date.now(),
         },
