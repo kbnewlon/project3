@@ -68,7 +68,7 @@ module.exports = function (sequelize, type) {
                 allowNull: true
             }
         });
-
+        Adventure_company.hasMany(models.Adventure);
     }
 
     return Adventure_company;
