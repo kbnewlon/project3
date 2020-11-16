@@ -30,10 +30,6 @@ module.exports = function (sequelize, type) {
             allowNull: false
         }
     })
-    Tag.associate = function (models) {
-        Tag.belongsToMany(models.Adventure, {
-            through: "tags_adventures"
-        });
-    };
+
     return Tag;
 };
