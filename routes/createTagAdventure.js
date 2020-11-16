@@ -3,7 +3,7 @@ const db = require("../models");
 //create adventure tag route
 module.exports = (app) => {
     app.post("/adventure/:id/:tag_id", function (req, res) {
-        db.Tag.findOne({
+        db.Adventure.findOne({
             where: {
                 id: req.params.id,
             },
@@ -12,7 +12,7 @@ module.exports = (app) => {
                 if (!data) {
                     res.status(404).json(data);
                 } else {
-                    data.addAdventure(req.params.tag_id);
+                    data.addTag(req.params.tag_id);
                     res.status(200).json(data);
                 }
             })
