@@ -39,6 +39,7 @@ app.use(
     })
 );
 
+require("./routes/createCompanyUser")(app);
 require("./routes/loginUser")(app);
 require("./routes/registerUser")(app);
 require("./routes/forgotPassword")(app);
