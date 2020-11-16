@@ -65,7 +65,7 @@ module.exports = function (sequelize, type) {
     Adventure_company.associate = function (models) {
         Adventure_company.belongsTo(models.Company_user, {
             foreignKey: {
-                allowNull: false
+                allowNull: true
             }
         });
 
