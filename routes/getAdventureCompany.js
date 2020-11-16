@@ -2,7 +2,7 @@ const db = require("../models");
 
 module.exports = (app) => {
     //get all adventures companies
-    app.get("/adventure/companies", function (req, res) {
+    app.get("/companies", function (req, res) {
         db.Adventure_company.findAll({
             include: {
                 model: db.Adventure,
@@ -17,7 +17,7 @@ module.exports = (app) => {
 
 
     //get one adventure company
-    app.get("/adventure/company/:id", function (req, res) {
+    app.get("/company/:id", function (req, res) {
         db.Adventure_company.findOne({
             where: {
                 id: req.params.id,
