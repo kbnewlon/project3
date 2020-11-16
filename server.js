@@ -47,6 +47,7 @@ require("./routes/createTagAdventure")(app);
 require("./routes/getAdventure")(app);
 require("./routes/getAdventureCompany")(app);
 require("./routes/getCompanyUser")(app);
+require("./routes/getTag")(app);
 require("./routes/loginUser")(app);
 require("./routes/registerUser")(app);
 require("./routes/forgotPassword")(app);
