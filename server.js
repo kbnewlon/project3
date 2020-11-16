@@ -44,6 +44,7 @@ require("./routes/deleteTagAdventure")(app);
 require("./routes/getAdventure")(app);
 require("./routes/getAdventureCompany")(app);
 require("./routes/getCompanyUser")(app);
+require("./routes/getTag")(app);
 require("./routes/updateAdventure")(app);
 require("./routes/updateAdventureCompany")(app);
 require("./routes/updateCompanyUser")(app);
