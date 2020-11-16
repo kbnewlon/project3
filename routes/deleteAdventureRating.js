@@ -1,11 +1,12 @@
-const db = ('../models');
+const db = require('../models')
 
 //delete adventure rating route
 module.exports = (app) => {
-    app.delete('./Adventure_rating/:id', function (req, res) {
+    app.delete('/adventure_rating/:id/:userId', function (req, res) {
         db.Adventure_rating.destroy({
             where: {
-                id: req.params.id
+                AdventureId: req.params.id,
+                UserId: req.params.userId
             }
         }).then(data => {
             console.log(data)
