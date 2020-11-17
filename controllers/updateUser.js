@@ -1,7 +1,9 @@
+const express = require("express");
+const router = express.Router();
 const passport = require('passport');
 const db = require("../models");
 
-//update user routes
+// update user routes
 router.put('/updateUser', (req, res, next) => {
     passport.authenticate('jwt', { session: false }, (err, user, info) => {
         if (err) {
