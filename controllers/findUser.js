@@ -1,4 +1,5 @@
 const passport = require('passport');
+const router = express.Router();
 const db = require("../models");
 
 //find user route
