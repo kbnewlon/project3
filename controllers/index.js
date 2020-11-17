@@ -9,10 +9,14 @@ router.get("/", (req, res) => {
 // unsecure routes in file
 router.use("/user", require("./registerUser"))
 router.use("/user", require("./loginUser"))
+router.use("/user", require("./deleteUser"))
 
+password
 // Secured in file
 router.use("/user", require("./findUser"))
 router.use("/user", require("./updateUser"))
+router.use("/user", require("./getStream"))
+
 
 
 // Route path secured
