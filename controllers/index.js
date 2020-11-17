@@ -10,8 +10,12 @@ router.get("/", (req, res) => {
 router.use("/user", require("./registerUser"))
 router.use("/user", require("./loginUser"))
 router.use("/user", require("./deleteUser"))
+router.use("/user", require("./forgotPassword"))
+router.use("/user", require("./resetPassword"))
+router.use("/user", require("./updatePassword"))
+router.use("/user", require("./updatePasswordViaEmail"))
 
-password
+
 // Secured in file
 router.use("/user", require("./findUser"))
 router.use("/user", require("./updateUser"))
