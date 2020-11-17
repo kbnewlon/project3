@@ -1,5 +1,6 @@
-const passport = require('passport');
+const express = require("express");
 const router = express.Router();
+const passport = require('passport');
 const db = require("../models");
 
 //find user route
