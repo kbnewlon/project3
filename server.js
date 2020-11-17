@@ -58,6 +58,7 @@ require("./routes/updatePasswordViaEmail")(app);
 require("./routes/findUsers")(app);
 require("./routes/deleteUser")(app);
 require("./routes/updateUser")(app);
+require("./routes/getStream")(app);
 
 
 var PORT = process.env.PORT || 3000;
