@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-//create new adventure
+//create new company user
 router.post("/company_user", function (req, res) {
     db.Company_user.create({
         user_name: req.body.user_name,
@@ -35,7 +35,7 @@ router.delete('/company_user/:id', function (req, res) {
     });
 });
 
-///get company user 
+///get all company users
 router.get("/company_user", function (req, res) {
     db.Company_user.findAll({
         include: {
