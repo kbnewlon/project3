@@ -1,6 +1,6 @@
 const db = require("../models");
 
-//create new adventure
+//create new adventure tag
 module.exports = (app) => {
     app.post("/tag", function (req, res) {
         db.Tag.create({

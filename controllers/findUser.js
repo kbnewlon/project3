@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const db = require("../models");
 
-//find user route
+
 router.get('/findUser', (req, res, next) => {
     passport.authenticate('jwt', { session: false }, (err, user, info) => {
         if (err) {
