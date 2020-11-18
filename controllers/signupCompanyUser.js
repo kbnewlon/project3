@@ -30,9 +30,9 @@ router.post('/signupCompanyUser', (req, res, next) => {
                         .update({
                             email: data.email,
                         })
-                        .then(() => {
+                        .then((data) => {
                             console.log('user created in db');
-                            res.status(200).send({ message: 'user created' });
+                            res.status(200).send(data);
                         });
                 });
             });
@@ -41,7 +41,7 @@ router.post('/signupCompanyUser', (req, res, next) => {
 });
 
 //create new adventure company
-router.post("/adventure/company", function (req, res) {
+router.post("/addCompany", function (req, res) {
     db.Adventure_company.create({
         name: req.body.name,
         address_1: req.body.address_1,
