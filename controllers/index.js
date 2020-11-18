@@ -14,6 +14,7 @@ router.use("/user", require("./forgotPassword"))
 router.use("/user", require("./resetPassword"))
 router.use("/user", require("./updatePassword"))
 router.use("/user", require("./updatePasswordViaEmail"))
+router.use("/user", require("./signupCompanyUser"))
 
 
 // Secured in file
