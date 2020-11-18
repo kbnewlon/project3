@@ -29,6 +29,9 @@ router.use("/company", require("./findCompany"))
 router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./adventureController")
 );
+router.use("/api/company", passport.authenticate('jwtCompany', { session: false }),
+    require("./adventureController")
+);
 router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./companyUserController")
 );
