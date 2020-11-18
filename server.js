@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 require("./auth/auth.js");
+require("./auth/authCompany.js");
 
 app.use(Cors());
 app.use(helmet());
