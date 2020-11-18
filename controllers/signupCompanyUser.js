@@ -4,7 +4,7 @@ const passport = require('passport');
 const db = require("../models");
 
 //create new company user
-router.post('/signup_company_user', (req, res, next) => {
+router.post('/signupCompanyUser', (req, res, next) => {
     passport.authenticate('registerCompany', (err, user, info) => {
         if (err) {
             console.error(err);
