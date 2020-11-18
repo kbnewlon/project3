@@ -6,7 +6,7 @@ module.exports = function (sequelize, type) {
             autoIncrement: true,
         },
 
-        user_name: {
+        username: {
             type: type.STRING,
             allowNull: false,
         },
