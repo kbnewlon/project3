@@ -25,6 +25,9 @@ router.put('/updateUser', (req, res, next) => {
                             first_name: req.body.first_name,
                             last_name: req.body.last_name,
                             email: req.body.email,
+                            city: req.body.city,
+                            state: req.body.state,
+                            image: req.body.image
                         })
                         .then(() => {
                             console.log('user updated');
