@@ -10,10 +10,11 @@ INSERT INTO adventures (name, description, image, longitude, latitude, Adventure
 
 INSERT INTO adventure_companies (name, address_1, address_2, city, state, zip_code, phone, email, website, description, image) VALUES ("REI Adventures","222 Yale Ave N","address_2" , "Seattle", "Washington", 98109, 2062231944, "travel@rei.com", "https://www.rei.com/adventures", "Wherever you want to go, whatever you want to get into, we've got a trip that’ll make your dream vacation come true. Visit like a local, explore at your own pace, and eat like a king (or a vegan king, if that's more your thing).", "https://www.rei.com/adventures/assets/adventures/images/trip/core/northamerica/obh_hero");
 
-INSERT INTO company_users (user_name, password, email) VALUES("companyusernameTest", "passwordTest", "companyuser@test.com");
+INSERT INTO company_users (username, password, email) VALUES("companyusernameTest", "passwordTest", "companyuser@test.com");
 
 INSERT INTO posts (title, description, image) VALUES("Neah Bay", "Went to Neah Bay because I saw it on this site. Thanks Minnesvart for the reccommendation. I had a great time!", "https://res.cloudinary.com/kaylanewlon/image/upload/v1605425539/kayla_neah_bay_zukt3j.jpg");
 
 INSERT INTO tags(name, description, image) VALUES ("Snowshoeing", "A snowshoe is footwear for walking over snow. Snowshoes work by distributing the weight of the person over a larger area so that the person's foot does not sink completely into the snow, a quality called 'flotation'. Snowshoeing is a form of hiking.","https://res.cloudinary.com/kaylanewlon/image/upload/v1605426083/GOPR0126_yb3vg6.jpg");
 
-INSERT INTO users(first_name, last_name, email, username, password, city, state, image, resetPasswordToken, resetPasswordExpires) VALUES ("Kayla", "Newlon", "testuser@email.com", "usernameTest", "Seattle", "Washington","https://res.cloudinary.com/kaylanewlon/image/upload/v1605426391/portfolio_pic_gmwni5.jpg", "123456789" );
+-- INSERT INTO users(first_name, last_name, email, username, password, city, state, image, resetPasswordToken, resetPasswordExpires) VALUES ("Kayla", "Newlon", "testuser@email.com", "usernameTest", "Seattle", "Washington","https://res.cloudinary.com/kaylanewlon/image/upload/v1605426391/portfolio_pic_gmwni5.jpg", "123456789" );
+-- DONT SEED USER, WILL INTERFERE WITH GETSTEAM
