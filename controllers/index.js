@@ -35,6 +35,10 @@ router.use("/api/company", passport.authenticate('jwtCompany', { session: false 
 router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./companyUserController")
 );
+
+router.use("/api/company", passport.authenticate('jwtCompany', { session: false }),
+    require("./companyUserController")
+);
 router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./adventureCompanyController")
 );
@@ -49,6 +53,10 @@ router.use("/api", passport.authenticate('jwt', { session: false }),
 
 router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./adventureRatingController")
+);
+
+router.use("/api", passport.authenticate('jwt', { session: false }),
+    require("./userPostController")
 );
 
 module.exports = router
