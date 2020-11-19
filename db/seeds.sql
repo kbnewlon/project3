@@ -12,4 +12,4 @@ INSERT INTO posts (title, description, image) VALUES("Neah Bay", "Went to Neah B
 
 INSERT INTO tags(name, description, image) VALUES ("Snowshoeing", "A snowshoe is footwear for walking over snow. Snowshoes work by distributing the weight of the person over a larger area so that the person's foot does not sink completely into the snow, a quality called 'flotation'. Snowshoeing is a form of hiking.","https://res.cloudinary.com/kaylanewlon/image/upload/v1605426083/GOPR0126_yb3vg6.jpg");
 
--- INSERT INTO users(first_name, last_name, email, username, password, city, state, image, resetPasswordToken, resetPasswordExpires) VALUES ("Kayla", "Newlon", "testuser@email.com", "usernameTest", "Seattle", "Washington","https://res.cloudinary.com/kaylanewlon/image/upload/v1605426391/portfolio_pic_gmwni5.jpg", "123456789" );
+INSERT INTO users(first_name, last_name, email, username, password, city, state, image, resetPasswordToken, resetPasswordExpires) VALUES ("Kayla", "Newlon", "testuser@email.com", "usernameTest", "Seattle", "Washington","https://res.cloudinary.com/kaylanewlon/image/upload/v1605426391/portfolio_pic_gmwni5.jpg", "123456789" );
