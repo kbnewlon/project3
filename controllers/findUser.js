@@ -27,6 +27,10 @@ router.get('/findUser', (req, res, next) => {
                         email: userInfo.email,
                         username: userInfo.username,
                         password: userInfo.password,
+                        image: userInfo.image,
+                        city: userInfo.city,
+                        state: userInfo.state,
+                        id: userInfo.id,
                         message: 'user found in db',
                     });
                 } else {
