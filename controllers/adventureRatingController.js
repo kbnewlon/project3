@@ -3,17 +3,18 @@ const router = express.Router();
 const db = require("../models");
 
 // create adventure rating
-router.post('/adventure_rating/:id/:userId', function (req, res) {
+router.post('/adventure_rating/:id', function (req, res) {
+    console.log("Hello World", req.user.dataValues.id)
     db.Adventure_rating.findAll({
         where: {
             AdventureId: req.params.id,
-            UserId: req.params.userId
+            UserId: req.user.dataValues.id
         }
     }).then(ratings => {
         if (ratings.length === 0) {
             db.Adventure_rating.create({
                 AdventureId: req.params.id,
-                UserId: req.params.userId
+                UserId: req.user.dataValues.id
             }).then(updateRating => {
                 if (!updateRating) {
                     res.status(404).json(updateRating)
