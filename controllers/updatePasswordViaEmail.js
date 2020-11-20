@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const bcrypt = require('bcrypt');
 const Sequelize = require('sequelize');
 const db = require("../models");
