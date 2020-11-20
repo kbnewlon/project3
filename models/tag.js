@@ -13,11 +13,11 @@ module.exports = function (sequelize, type) {
 
         description: {
             type: type.TEXT,
-            allowNull: false,
+            allowNull: true,
         },
         image: {
             type: type.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         createdAt: {
             type: 'TIMESTAMP',

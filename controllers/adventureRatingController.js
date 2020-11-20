@@ -46,4 +46,23 @@ router.delete('/adventure_rating/:id/:userId', function (req, res) {
     });
 });
 
+
+//get like count
+router.get('/adventure_rating/:id', function (req, res){
+    db.Adventure_rating.count({
+        where: {
+            AdventureId: req.params.id
+        }
+    }).then(count => {
+        console.log(count)
+        res.status(200).json(count)
+
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+
+
+
 module.exports = router
