@@ -21,7 +21,6 @@ router.post('/registerUser', (req, res, next) => {
       console.error(info.message);
       res.status(403).send(info.message);
     } else {
-      // eslint-disable-next-line no-unused-vars
       req.logIn(user, error => {
         console.log(user);
         const data = {
