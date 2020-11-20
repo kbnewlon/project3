@@ -10,7 +10,6 @@ router.delete('/company/:id', function (req, res) {
             id: req.params.id
         }
     }).then(data => {
-        console.log(data)
         res.status(200).json(data)
 
     }).catch(err => {
@@ -47,7 +46,6 @@ router.get("/company/:id", function (req, res) {
         },
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
@@ -61,7 +59,6 @@ router.put("/adventure/company/:id", function (req, res) {
         where: { id: req.params.id },
     })
         .then(function (companyInfo) {
-            console.log(companyInfo);
             companyInfo.update({
                 name: req.body.name,
                 address_1: req.body.address_1,

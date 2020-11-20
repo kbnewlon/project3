@@ -23,20 +23,17 @@ router.post('/registerUser', (req, res, next) => {
     } else {
       // eslint-disable-next-line no-unused-vars
       req.logIn(user, error => {
-        console.log(user);
         const data = {
           first_name: req.body.first_name,
           last_name: req.body.last_name,
           email: req.body.email,
           username: user.username,
         };
-        console.log(data);
         db.User.findOne({
           where: {
             username: data.username,
           },
         }).then(user => {
-          console.log(user);
           client.user(data.username).create({
             name: `${data.first_name} ${data.last_name}`
           });

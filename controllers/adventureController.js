@@ -13,7 +13,6 @@ router.post("/adventure", function (req, res) {
         AdventureCompanyId: req.body.AdventureCompanyId,
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
@@ -28,7 +27,6 @@ router.delete("/adventure/:id", function (req, res) {
             id: req.params.id
         }
     }).then(data => {
-        console.log(data)
         res.status(200).json(data)
 
     }).catch(err => {
@@ -43,7 +41,6 @@ router.get("/adventures", function (req, res) {
         include: [db.Adventure_rating, db.Adventure_company, db.Tag],
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
@@ -60,7 +57,6 @@ router.get("/adventure/:id", function (req, res) {
         include: [db.Adventure_rating, db.Adventure_company, db.Tag],
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
@@ -74,7 +70,6 @@ router.put("/adventure/:id", function (req, res) {
         where: { id: req.params.id },
     })
         .then(function (adventureInfo) {
-            console.log(adventureInfo);
             adventureInfo.update({
                 name: req.body.name,
                 description: req.body.description,

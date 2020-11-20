@@ -10,7 +10,6 @@ router.post("/tag", function (req, res) {
         image: req.body.image,
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
@@ -25,7 +24,6 @@ router.delete('/tag/:id', function (req, res) {
             id: req.params.id
         }
     }).then(data => {
-        console.log(data)
         res.status(200).json(data)
 
     }).catch(err => {
@@ -65,7 +63,6 @@ router.put("/tag/:id", function (req, res) {
         where: { id: req.params.id },
     })
         .then(function (tagInfo) {
-            console.log(tagInfo);
             tagInfo.update({
                 name: req.body.name,
                 description: req.body.description,

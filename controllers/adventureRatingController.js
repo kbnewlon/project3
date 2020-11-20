@@ -4,7 +4,6 @@ const db = require("../models");
 
 // create adventure rating
 router.post('/adventure_rating/:id', function (req, res) {
-    console.log(req.user.dataValues.id)
     db.Adventure_rating.findAll({
         where: {
             AdventureId: req.params.id,
@@ -39,7 +38,6 @@ router.delete('/adventure_rating/:id/:userId', function (req, res) {
             UserId: req.params.userId
         }
     }).then(data => {
-        console.log(data)
         res.status(200).json(data)
 
     }).catch(err => {
