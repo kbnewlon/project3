@@ -12,7 +12,7 @@ const client = stream.connect(
   { location: 'us-east' },
 );
 
-
+// Log in user
 router.post('/loginUser', (req, res, next) => {
   passport.authenticate('login', (err, users, info) => {
     if (err) {

@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
 const Sequelize = require('sequelize');
-
 const BCRYPT_SALT_ROUNDS = 12;
 const Op = Sequelize.Op;
 const passport = require('passport');
@@ -9,7 +8,6 @@ const JWTstrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 const db = require("../models");
 require("dotenv").config();
-
 
 passport.use(
     'registerCompany',

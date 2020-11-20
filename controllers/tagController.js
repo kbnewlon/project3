@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-//create new adventure tag
+// Create new tag
 router.post("/tag", function (req, res) {
     db.Tag.create({
         name: req.body.name,
@@ -17,7 +17,7 @@ router.post("/tag", function (req, res) {
         });
 });
 
-//delete adventure tag
+// Delete tag
 router.delete('/tag/:id', function (req, res) {
     db.Tag.destroy({
         where: {
@@ -33,7 +33,7 @@ router.delete('/tag/:id', function (req, res) {
 });
 
 
-//get all tags
+// Get all tags
 router.get("/tags", function (req, res) {
     db.Tag.findAll({})
         .then(function (data) {
@@ -44,7 +44,7 @@ router.get("/tags", function (req, res) {
         });
 });
 
-//get one tag
+// Get one tag
 router.get("/tag/:id", function (req, res) {
     db.Tag.findOne({
         where: { id: req.params.id },
@@ -57,7 +57,7 @@ router.get("/tag/:id", function (req, res) {
         });
 });
 
-//update tag
+// Update tag
 router.put("/tag/:id", function (req, res) {
     db.Tag.findOne({
         where: { id: req.params.id },
@@ -68,9 +68,8 @@ router.put("/tag/:id", function (req, res) {
                 description: req.body.description,
                 image: req.body.image,
             }).then((data) => {
-                console.log(data)
+                res.status(200).json(tagInfo);
             });
-            res.status(200).json(tagInfo);
         })
         .catch((err) => {
             res.status(500).json(err);

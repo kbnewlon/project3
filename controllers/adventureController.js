@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-// create new adventure
+// Create new adventure
 router.post("/adventure", function (req, res) {
     db.Adventure.create({
         name: req.body.name,
@@ -20,7 +20,7 @@ router.post("/adventure", function (req, res) {
         });
 });
 
-// delete adventure
+// Delete adventure
 router.delete("/adventure/:id", function (req, res) {
     db.Adventure.destroy({
         where: {
@@ -35,7 +35,8 @@ router.delete("/adventure/:id", function (req, res) {
     });
 });
 
-// get all adventures
+// Un-secure route in adventureLandingController 
+// Get all adventures secure 
 router.get("/adventures", function (req, res) {
     db.Adventure.findAll({
         include: [db.Adventure_rating, db.Adventure_company, db.Tag],
@@ -48,7 +49,7 @@ router.get("/adventures", function (req, res) {
         });
 });
 
-// get one adventure
+// Get one adventure
 router.get("/adventure/:id", function (req, res) {
     db.Adventure.findOne({
         where: {

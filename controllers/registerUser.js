@@ -11,7 +11,7 @@ const client = stream.connect(
   { location: 'us-east' },
 );
 
-
+// Register user 
 router.post('/registerUser', (req, res, next) => {
   passport.authenticate('register', (err, user, info) => {
     if (err) {

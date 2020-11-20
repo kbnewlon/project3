@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-//create adventure tag route
+// Create adventure tag route
 router.post("/adventure/:id/:tag_id", function (req, res) {
     db.Adventure.findOne({
         where: {
@@ -22,8 +22,7 @@ router.post("/adventure/:id/:tag_id", function (req, res) {
         });
 });
 
-
-// delete adventure tag
+// Delete adventure tag
 router.delete('/adventure/:id/:tag_id', function (req, res) {
     db.Adventure.findOne({
         where: {
@@ -42,9 +41,5 @@ router.delete('/adventure/:id/:tag_id', function (req, res) {
             res.status(500).json(err);
         });
 });
-
-
-
-
 
 module.exports = router

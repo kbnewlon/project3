@@ -4,13 +4,10 @@ const Sequelize = require('sequelize');
 const db = require("../models");
 const express = require("express");
 const router = express.Router();
-
 const Op = Sequelize.Op;
-
-
-
 const BCRYPT_SALT_ROUNDS = 12;
 
+// Update password via email
 router.put('/updatePasswordViaEmail', (req, res) => {
   db.User.findOne({
     where: {

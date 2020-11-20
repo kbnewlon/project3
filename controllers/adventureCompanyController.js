@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
+// ---------------------------------> Create New Company route is in signupCompanyUser.js <----------------------------------
 
-//delete adventure company route
+// Delete adventure company
 router.delete('/company/:id', function (req, res) {
     db.Adventure_company.destroy({
         where: {
@@ -18,8 +19,7 @@ router.delete('/company/:id', function (req, res) {
     });
 });
 
-
-//get all adventures companies
+// Get all adventures companies
 router.get("/companies", function (req, res) {
     db.Adventure_company.findAll({
         include: {
@@ -33,8 +33,7 @@ router.get("/companies", function (req, res) {
     });
 });
 
-
-//get one adventure company
+// Get one adventure company
 router.get("/company/:id", function (req, res) {
     db.Adventure_company.findOne({
         where: {
@@ -53,7 +52,7 @@ router.get("/company/:id", function (req, res) {
         });
 });
 
-//update adventure company route 
+// Update adventure company  
 router.put("/adventure/company/:id", function (req, res) {
     db.Adventure_company.findOne({
         where: { id: req.params.id },

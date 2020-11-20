@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-// create adventure rating
+// Create adventure rating
 router.post('/adventure_rating/:id', function (req, res) {
     db.Adventure_rating.findAll({
         where: {
@@ -30,7 +30,7 @@ router.post('/adventure_rating/:id', function (req, res) {
     })
 })
 
-// delete adventure rating 
+// Delete adventure rating 
 router.delete('/adventure_rating/:id/:userId', function (req, res) {
     db.Adventure_rating.destroy({
         where: {
@@ -46,8 +46,7 @@ router.delete('/adventure_rating/:id/:userId', function (req, res) {
     });
 });
 
-
-//get like count
+// Get adventure rating (like count)
 router.get('/adventure_rating/:id', function (req, res){
     db.Adventure_rating.count({
         where: {
