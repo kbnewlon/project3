@@ -24,7 +24,11 @@ app.use(express.json());
 require("./auth/auth.js");
 require("./auth/authCompany.js");
 
-app.use(Cors());
+//PRODUCTION CORS
+app.use(Cors({
+    origin:["https://minnesvart.herokuapp.com/", "http://localhost:8080"]
+}));
+
 app.use(helmet());
 app.use(passport.initialize());
 
