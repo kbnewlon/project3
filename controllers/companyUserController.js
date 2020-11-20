@@ -10,7 +10,6 @@ router.delete('/company_user/:id', function (req, res) {
             id: req.params.id
         }
     }).then(data => {
-        console.log(data)
         res.status(200).json(data)
 
     }).catch(err => {
@@ -60,7 +59,6 @@ router.put("/company_user/:id", function (req, res) {
         where: { id: req.params.id },
     })
         .then(function (userInfo) {
-            console.log(userInfo);
             userInfo.update({
                 user_name: req.body.user_name,
                 password: req.body.password,

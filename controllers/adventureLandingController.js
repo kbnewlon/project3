@@ -7,7 +7,6 @@ router.get("/adventures", function (req, res) {
         include: [db.Adventure_rating, db.Adventure_company, db.Tag],
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
