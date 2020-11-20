@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const db = require("../models");
 
-//delete user routes
+// Delete user 
 router.delete('/deleteUser', (req, res, next) => {
     passport.authenticate('jwt', { session: false }, (err, user, info) => {
         if (err) {

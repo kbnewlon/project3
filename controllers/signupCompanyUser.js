@@ -3,7 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const db = require("../models");
 
-//create new company user
+// Create new company user
 router.post('/signupCompanyUser', (req, res, next) => {
     passport.authenticate('registerCompany', (err, user, info) => {
         if (err) {
@@ -37,7 +37,7 @@ router.post('/signupCompanyUser', (req, res, next) => {
     })(req, res, next);
 });
 
-//create new adventure company
+// Create new adventure company
 router.post("/addCompany", function (req, res) {
     db.Adventure_company.create({
         name: req.body.name,

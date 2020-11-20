@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 const Op = Sequelize.Op;
 
-//reset password controller 
+// Reset password  
 router.get('/reset/:id', (req, res) => {
   db.User.findOne({
     where: {

@@ -3,10 +3,9 @@ const router = express.Router();
 const crypto = require('crypto');
 const db = require("../models");
 require('dotenv').config();
-
 const nodemailer = require('nodemailer');
 
-//forgot password controller
+// Forgot password controller
 router.post('/forgotPassword', (req, res) => {
     if (req.body.email === '') {
         res.status(400).send('email required');

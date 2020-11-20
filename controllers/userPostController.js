@@ -2,11 +2,9 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 const stream = require('getstream');
-
-
-
 const client = stream.connect(process.env.STREAM_API_KEY, process.env.STREAM_KEY_SECRET, process.env.STREAM_router_ID);
-//Adding User Post
+
+// Create user post
 router.post("/userPost/:username", function (req, res) {
     const currentUser = client.feed('timeline', req.params.username);
     const globalUser = client.feed('timeline', "globalUser")
@@ -42,13 +40,12 @@ router.post("/userPost/:username", function (req, res) {
         .catch((err) => {
             res.status(500).json(err);
         });
+});
 
-})
-
-
+// Get 20 user posts from getstream.io
 router.get("/userPosts", function (req, res) {
-
     const globalUser = client.feed('timeline', "globalUser")
+
     globalUser.get({
         limit: 20, enrich: true,
         reactions: { own: true, counts: true, recent: true },

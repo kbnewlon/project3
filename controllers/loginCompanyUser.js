@@ -4,8 +4,7 @@ const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const db = require("../models");
 
-
-
+// Log in company user
 router.post('/loginCompanyUser', (req, res, next) => {
   passport.authenticate('loginCompany', (err, users, info) => {
     if (err) {
