@@ -37,7 +37,6 @@ router.post("/userPost/:username", function (req, res) {
         globalUser.addActivity(activity);
 
     }).then(function (data) {
-        console.log(data);
         res.status(200).json(data);
     })
         .catch((err) => {
@@ -55,11 +54,9 @@ router.get("/userPosts", function (req, res) {
         reactions: { own: true, counts: true, recent: true },
     })
         .then((data) => {
-            console.log(data.results)
             res.status(200).json(data.results);
         })
         .catch((err) => {
-            console.log(err)
             res.status(500).json(err);
         });
 

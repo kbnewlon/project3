@@ -14,18 +14,15 @@ router.post('/signupCompanyUser', (req, res, next) => {
             res.status(403).send(info.message);
         } else {
             req.logIn(user, error => {
-                console.log(user);
                 const data = {
                     email: req.body.email,
                     username: user.username,
                 };
-                console.log(data);
                 db.Company_user.findOne({
                     where: {
                         username: data.username,
                     },
                 }).then(user => {
-                    console.log(user);
                     user
                         .update({
                             email: data.email,
@@ -57,7 +54,6 @@ router.post("/addCompany", function (req, res) {
         CompanyUserId: req.body.CompanyUserId,
     })
         .then(function (data) {
-            console.log(data);
             res.status(200).json(data);
         })
         .catch((err) => {
