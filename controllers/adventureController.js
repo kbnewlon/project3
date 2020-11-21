@@ -3,7 +3,24 @@ const router = express.Router();
 const db = require("../models");
 
 // Create new adventure
+// router.post("/adventure", function (req, res) {
+//     db.Adventure.create({
+//         name: req.body.name,
+//         description: req.body.description,
+//         image: req.body.image,
+//         longitude: req.body.longitude,
+//         latitude: req.body.latitude,
+//         AdventureCompanyId: req.body.AdventureCompanyId,
+//     })
+//         .then(function (data) {
+//             res.status(200).json(data);
+//         })
+//         .catch((err) => {
+//             res.status(500).json(err);
+//         });
+// });
 router.post("/adventure", function (req, res) {
+
     db.Adventure.create({
         name: req.body.name,
         description: req.body.description,
@@ -12,8 +29,36 @@ router.post("/adventure", function (req, res) {
         latitude: req.body.latitude,
         AdventureCompanyId: req.body.AdventureCompanyId,
     })
-        .then(function (data) {
-            res.status(200).json(data);
+        .then(function (newAdventureData) {
+            for (let i = 0; i < req.body.tags.length; i++) {
+                const tag = req.body.tags[i];
+                db.Tag.create({
+                    name: tag,
+                    description: tag,
+                    image: tag
+                })
+                    .then(function (newTagData) {
+                        db.Adventure.findOne({
+                            where: {
+                                id: newAdventureData.id
+                            },
+                        })
+                            .then(function (data) {
+                                if (!data) {
+                                    res.status(404).json(data);
+                                } else {
+                                    data.addTag(newTagData.id);
+                                }
+                            })
+                            .catch((err) => {
+                                res.status(500).json(err);
+                            });
+                    })
+                    .catch((err) => {
+                        res.status(500).json(err);
+                    });
+            }
+            res.status(200).json("New Adventures Added");
         })
         .catch((err) => {
             res.status(500).json(err);
