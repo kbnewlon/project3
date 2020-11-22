@@ -92,13 +92,14 @@ passport.use(
 );
 
 const opts = {
-    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken('JWT'),
-    secretOrKey: process.env.JWT_SECRET,
+    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+    secretOrKey: process.env.JWT_COMPANY_SECRET,
 };
 
 passport.use(
     'jwtCompany',
     new JWTstrategy(opts, (jwt_payload, done) => {
+        console.log("STRATEGY: COMPANY JWT FIRED")
         try {
             db.Company_user.findOne({
                 where: {
