@@ -24,7 +24,7 @@ router.post('/loginCompanyUser', (req, res, next) => {
             username: req.body.username,
           },
         }).then(user => {
-          const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
+          const token = jwt.sign({ id: user.id }, process.env.JWT_COMPANY_SECRET, {
             expiresIn: 60 * 60,
           });
           const id = user.id
