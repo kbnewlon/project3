@@ -22,28 +22,31 @@ module.exports = function (sequelize, type) {
     city: {
       type: type.STRING,
       allowNull: true,
+      defaultValue: "Somewhere"
     },
     state: {
       type: type.STRING,
       allowNull: true,
+      defaultValue: "US"
     },
     image: {
       type: type.STRING,
       allowNull: true,
+      defaultValue: "minnesvart/anonymous-gender-neutral-face-avatar-incognito-head-silhouette-vector-id1220827245_m1ehe7"
     },
     resetPasswordToken: type.STRING,
     resetPasswordExpires: type.DATE,
-    
+
     createdAt: {
       type: 'TIMESTAMP',
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
       allowNull: false
-  },
-  updatedAt: {
+    },
+    updatedAt: {
       type: 'TIMESTAMP',
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
       allowNull: false
-  }
+    }
   });
   User.associate = function (models) {
     User.hasMany(models.Adventure_rating)
