@@ -44,6 +44,10 @@ router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./adventureCompanyController")
 );
 
+router.use("/api_company", passport.authenticate('jwtCompany', { session: false }),
+    require("./adventureCompanyEdit")
+);
+
 router.use("/api", passport.authenticate('jwt', { session: false }),
     require("./tagController")
 );
