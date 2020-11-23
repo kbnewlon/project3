@@ -26,7 +26,7 @@ require("./auth/authCompany.js");
 
 //PRODUCTION CORS
 app.use(Cors({
-    origin:["https://minnesvart.herokuapp.com/", "http://localhost:8080"]
+    origin:["https://minnesvart.herokuapp.com", "http://localhost:8080"]
 }));
 
 app.use(helmet());
