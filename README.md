@@ -4,29 +4,26 @@
 ## Description
 Minnesvärt is a microadventure community providing short, simple, and local activity ideas to Washingtonians. At Minnesvärt we are selling the idea of access to the microadventure community. Adventure tour companies can use this application to post their activities. The user base will be able to retrieve that information, filter by tags, rate the adventure, and network within activity discussion. Stay wild, stay local, stay Minnesvärt.
 
-Link to deployed application: http://minnesvart.herokuapp.com/
+Link to deployed application: https://minnesvart.herokuapp.com/
 
 ## **Table of Contents**
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [License](#license)
-4. [Framework](#framework)
-5. [Contributors](#contributors)
-6. [Wireframe](#wireframe)
-7. [ERD](#erd)
-8. [Tests](#tests)
-9. [Questions](#questions)
-10. [Visuals](#visuals)
-11. [Links](#links)
-
-## **Installation**
+1. [Usage](#usage)
+2. [License](#license)
+3. [Framework](#framework)
+4. [Contributors](#contributors)
+5. [Wireframe](#wireframe)
+6. [ERD](#erd)
+7. [Questions](#questions)
+8. [Visuals](#visuals)
+9. [Links](#links)
 
 
 ## **Usage**
-As a User
-As a company user
-As an adventure company 
+As a first time user click on the sign up button in the middle of the landing page. Create a username and password and click sign up. Once you've logged in click on the drawer on the left side of the page to navigate to your profile or adventures page. As a user you can edit your profile picture, add activities, post to your personal feed, and follow other users. 
+<br><br>
+As a first time company user scroll to the bottom of the landing page. In the footer you will see the option to login or sign up. Click sign up and enter in your company user login information. From the company user profile you can post adventures for users to favorite, as well as the contact information for your adventure company. 
+
 
 ## **License**
 Copyright (c) 2020, Minnesvärt. 
@@ -58,16 +55,17 @@ Kayla Newlon - https://github.com/kbnewlon / kayla.b.newlon@gmail.com
 ## **ERD**
 ![ERD Backend](readme-images/ERD-Backend.png)
 
-## **Tests**
-
 
 ## **Questions**
-
+Contact our team at minnesvart@gmail.com for any questions 
 
 ## **Visuals**
-
+![Screenshot of Landing Page](readme-images/screenshot_landing_page.PNG)
+![Screenshot of Profile Page](readme-images/screenshot_profile_page.PNG)
+![Screenshot of Adventures Page](readme-images/screenshot_adventures.PNG)
+![Screenshot of example company landing page](readme-images/screenshot_company_landing.PNG)
 
 ## **Links**
-<br>Backend Repo: https://github.com/kbnewlon/project3
+Backend Repo: https://github.com/kbnewlon/project3
 <br>Frontend Repo: https://github.com/mfallesen/project3-frontend
-<br>Deployed Application on Heroku: http://minnesvart.herokuapp.com/
+<br>Deployed Application on Heroku: https://minnesvart.herokuapp.com/
