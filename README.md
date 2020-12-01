@@ -1,5 +1,6 @@
 # Minnesvärt
 
+![GitHub top language](https://img.shields.io/github/languages/top/kbnewlon/project3) ![Libraries.io dependency status for GitHub repo](https://img.shields.io/badge/license-MIT_License-yellowgreen)
 
 ## Description
 Minnesvärt is a microadventure community providing short, simple, and local activity ideas to Washingtonians. At Minnesvärt we are selling the idea of access to the microadventure community. Adventure tour companies can use this application to post their activities. The user base will be able to retrieve that information, filter by tags, rate the adventure, and network within activity discussion. Stay wild, stay local, stay Minnesvärt.
