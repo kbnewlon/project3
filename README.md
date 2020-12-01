@@ -13,10 +13,11 @@ Link to deployed application: https://minnesvart.herokuapp.com/
 3. [Framework](#framework)
 4. [Contributors](#contributors)
 5. [Wireframe](#wireframe)
-6. [ERD](#erd)
-7. [Questions](#questions)
-8. [Visuals](#visuals)
-9. [Links](#links)
+6. [Technologies](#technologies)
+7. [ERD](#erd)
+8. [Questions](#questions)
+9. [Visuals](#visuals)
+10. [Links](#links)
 
 
 ## **Usage**
@@ -51,6 +52,20 @@ Kayla Newlon - https://github.com/kbnewlon / kayla.b.newlon@gmail.com
 ## **Wireframe**
 
 [Wireframe by Figma](https://www.figma.com/file/O7fe1y0SaEDsxI3PeEu51H/Untitled?node-id=0%3A1)
+
+## **Technologies**
+* React.js
+* JWT
+* Bcrypt
+* Node
+* MySQL
+* GetStream.io
+* Helmet
+* Moment
+* Fuse.js
+* Cloudinary
+* Passport
+* Google Maps
 
 ## **ERD**
 ![ERD Backend](readme-images/ERD-Backend.png)
