@@ -18,7 +18,8 @@ Link to deployed application: https://minnesvart.herokuapp.com/
 7. [ERD](#erd)
 8. [Questions](#questions)
 9. [Visuals](#visuals)
-10. [Links](#links)
+10. [Demos](#demos)
+11. [Links](#links)
 
 
 ## **Usage**
@@ -80,6 +81,12 @@ Contact our team at minnesvart@gmail.com for any questions
 ![Screenshot of Profile Page](readme-images/screenshot_profile_page.PNG)
 ![Screenshot of Adventures Page](readme-images/screenshot_adventures.PNG)
 ![Screenshot of example company landing page](readme-images/screenshot_company_landing.PNG)
+
+## **Demos**
+Adventure Company User Demo: https://youtu.be/0wrHZZjhLL4
+<br>User Demo: https://youtu.be/moe7m-lB4CM 
+<br>Mobile User Demo: https://youtu.be/Ycgiax4qU2k
+
 
 ## **Links**
 Backend Repo: https://github.com/kbnewlon/project3
